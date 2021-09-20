@@ -1,0 +1,22 @@
+username 
+- (varchar 50) 
+- unique
+
+email 
+- (varchar 25) 
+- unique
+
+password 
+- (text)
+
+phone 
+- (varchar 25) 
+- unique
+
+photo 
+- (varchar 25)
+
+role 
+- (enum)
+ - admin
+ - user

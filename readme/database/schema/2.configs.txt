@@ -1,0 +1,5 @@
+name 
+- (varchar 25)
+
+value 
+- (text)

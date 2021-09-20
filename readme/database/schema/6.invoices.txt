@@ -1,0 +1,25 @@
+user_id 
+- (integer)
+
+product_id
+- (integer)
+
+status 
+- (enum)
+ - pending
+ - payment
+ - rejected
+ - waiting
+ - running
+ - compeleted
+ - failed
+ - canceled
+
+start_rent 
+- (timestamp)
+
+hour
+- (integer)
+
+total
+- (integer)

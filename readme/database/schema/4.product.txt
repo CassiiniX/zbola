@@ -1,0 +1,28 @@
+address 
+- (text)
+
+star 
+- (integer)
+
+description 
+- (text)
+
+fasilitas 
+- (text)
+
+quesation 
+- (text)
+
+price 
+- (integer)
+
+rent  
+- (boolean)
+
+images 
+- (text)
+
+status 
+- (enum)
+ - active
+ - nonactive

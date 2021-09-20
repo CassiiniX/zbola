@@ -1,0 +1,11 @@
+user_id 
+- (integer)
+
+title 
+- (varchar 25)
+
+content 
+- (text)
+
+read 
+- (boolean)
