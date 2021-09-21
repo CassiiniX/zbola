@@ -10,15 +10,15 @@
 	    </ul>
     </li>
 
-	 <li>
+	<li>
          Jika belum membayar sampai batas waktu yang di tentukan maka admin dapat mengagalkan invoice (FAILED)
-	 </li>
+	</li>
 
-	 <li>
+	<li>
          Jika sudah membayar status selanjutnya adalah menunggu (WAITING)
     </li>
 
-	 <li>
+	<li>
          Jika sudah dalam waktu penyewaan maka statusnya adalah dalam penyewaan (RUNNING)
     </li>
 	 
