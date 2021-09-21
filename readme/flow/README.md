@@ -2,8 +2,7 @@
 
 <ul>
 	<li>
-        Pertama kali invoice di buat statusnya adalah pending (PENDING)
-	    <br/>
+        Pertama kali invoice di buat statusnya adalah pending (PENDING)	    
 	    Di admin terdapat 2 opsi :
         <ul> 
     	    <li>Admin dapat menolak (REJECTED)</li>
