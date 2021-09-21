@@ -3,11 +3,10 @@
 <ul>
 	<li>
         Pertama kali invoice di buat statusnya adalah pending (PENDING)	    
-	    Di admin terdapat 2 opsi :
-        <dd> 
-    	   <dt>Admin dapat menolak (REJECTED)</dt>
-    	   <dt>Admin dapat merubah status menjadi pembayaran (PAYMENT)</dt>
-	    </dd>
+        <br/>
+	    Di admin terdapat 2 opsi :        
+    	   Admin dapat menolak (REJECTED)
+    	   Admin dapat merubah status menjadi pembayaran (PAYMENT)	    
     </li>
 
 	<li>
