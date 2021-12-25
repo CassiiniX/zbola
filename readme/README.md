@@ -58,57 +58,7 @@
   </ul>
 </div>
 
-<h4> Langkah-langkah : </h4>
-<div>
-  <ul>
-    <li>
-      <p>
-        buat database dengan mengunakan <b>phpmyadmin/mysqli client</b>
-      </p>
-    </li>
-    <li>
-      <p>
-        copy folder <b>public/assets/images-backup</b> 
-        menjadi <b>public/assets/images</b> 
-      </p>
-    </li>
-    <li> 
-      <p>
-        copy <b>.env.example</b> file ganti namanya dengan <b>.env</b>
-      </p>
-    </li>    
-    <li>  
-      <p>
-        edit <b>.env</b> file <br/><br/>
-        DB_DATABASE=<b>{DATABASE_NAME}</b> <br/>
-        DB_USERNAME=<b>{USERNAME_MYSQL}</b> <br/>
-        DB_PASSWORD=<b>{PASSWORD_MYSQL}</b> <br/>
-      </p>
-    </li>
-    <li>  
-      <p>
-        <b>composer install</b>
-      </p>
-    </li>
-    <li>    
-      <p>
-        <b>php artisan migrate:fresh --seed</b>
-      </p>
-    </li>
-    <li>  
-      <p>
-        <b>php artisan serve</b>
-      </p>
-    </li>
-  <ul>
-</div>
-
 <h4> Alur : </h4>
 <div>
   <a href="flow/README.md">Alur</a>
-</div>
-
-<h4> Perubahan : </h5>
-<div>
-  <a href="change/README.md">Perubahan</a>
 </div>
