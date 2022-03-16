@@ -35,11 +35,11 @@ class InvoiceController extends Controller
 
     		\DB::commit();
 
-            return FormatRespone::success("/user/history-invoice","Berhasil membatalkan invoice");    	
+            return FormatResponse::success("/user/history-invoice","Berhasil membatalkan invoice");    	
     	}catch(\Exception $e){
     		\DB::rollback();
 
-    		return FormatRespone::failed($e);
+    		return FormatResponse::failed($e);
     	}
     }
 }
