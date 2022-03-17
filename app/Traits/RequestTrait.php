@@ -21,7 +21,7 @@ trait RequestTrait{
      * @return json     
     */
     public function failedValidation(Validator $validator){    
-        if(!request()->isJson()){
+        if(!request()->hasHeader('X-Mobile-Request')){
             throw new HttpResponseException(
                 back()
                 ->withInput()

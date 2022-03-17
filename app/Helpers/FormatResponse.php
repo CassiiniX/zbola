@@ -41,7 +41,7 @@ class FormatResponse{
 			$response["failed"] = $error->getMessage();
 		}
 
-        if(!request()->isJson()){
+        if(!request()->hasHeader('X-Mobile-Request')){
 			return back()
 		    	->withInput()
 				->with([
