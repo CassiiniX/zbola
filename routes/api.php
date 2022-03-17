@@ -22,7 +22,7 @@ Route::group(["prefix" => "v1","as" => "v1."],function(){
         ]);
     });
 
-    Route::group(["middleware" => ["isNotAuth"],"prefix" => "auth","namespace" => "User","as" => "auth."],function(){
+    Route::group(["prefix" => "auth","namespace" => "User","as" => "auth."],function(){
         Route::post("/signin","Api\AuthController@signin")->name("signin");
         Route::post("/signup","Api\AuthController@signup")->name("signup");
 
@@ -32,7 +32,7 @@ Route::group(["prefix" => "v1","as" => "v1."],function(){
         });
     });    
 
-    Route::group(["middleware" => ["auth:sanctum","isUser"],"prefix" => "user","namespace" => "User","as" => "user."],function(){
+    Route::group(["middleware" => ["auth:sanctum"],"prefix" => "user","namespace" => "User","as" => "user."],function(){
         Route::get("/","Api\HomeController@index")->name("home");
 		Route::post("/profil/edit-data","Api\ProfilController@editData")->name("edit.data");
 		Route::post("/profil/edit-photo","Api\ProfilController@editPhoto")->name("edit.photo");

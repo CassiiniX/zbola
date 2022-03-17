@@ -25,8 +25,8 @@ class HomeController extends Controller
 
       return response()->json([
         "invoice" => $invoice,
-        "expired_payment" => $expiredPayment,
-        "end_rent" => $endRent
+        "expired_payment" => $expiredPayment ?? null,
+        "end_rent" => $endRent ?? null
       ]);
    }
 }

@@ -9,6 +9,7 @@ use App\Models\{
 };
 use App\Helpers\FormatResponse;
 use App\Models\Config as ConfigModel;
+use Illuminate\Http\Request;
 
 class InvoiceController extends Controller
 {
@@ -64,8 +65,8 @@ class InvoiceController extends Controller
 
 		return response()->json([
 			"invoice" => $invoice,
-			"expired_payment" => $expiredPayment,
-			"end_rent" => $endRent
+			"expired_payment" => $expiredPayment ?? null,
+			"end_rent" => $endRent ?? null
 		]);		
 	}
 

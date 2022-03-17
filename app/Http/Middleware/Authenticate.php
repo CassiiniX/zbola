@@ -14,6 +14,10 @@ class Authenticate extends Middleware
      */
     protected function redirectTo($request)
     {
+        if(request()->hasHeader('X-Mobile-Request')){
+            abort(response()->json(["message" => "Unauthorized"],401));
+        }
+
         if (! $request->expectsJson()) {
             return route('login');
         }

@@ -5,7 +5,7 @@ namespace App\Http\Controllers\User\Api;
 use App\Http\Controllers\Controller;
 use App\Models\Product;
 
-class ProfilController extends Controller
+class ProductController extends Controller
 {
    public function index(){
         $product = Product::query()
