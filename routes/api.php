@@ -14,6 +14,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {    
-    return $request->user();
+
+Route::group(["prefix" => "v1","as" => "v1."],function(){
+    Route::get("/status",function(){
+        return response()->json([
+            "message" => "Active"
+        ]);
+    });
+
+    Route::group(["prefix" => "auth","namespace" => "User","as" => "auth."],function(){
+        Route::post("/signin","Api\AuthController@signin")->name("signin");
+        Route::post("/signup","Api\AuthController@signup")->name("signup");
+
+        Route::group(["middleware" => ["auth:sanctum"]],function(){
+            Route::post("/logout","Api\AuthController@logout")->name("logout");
+            Route::get("/me","Api\AuthController@me")->name("me");
+        });
+    });    
 });

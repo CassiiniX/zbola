@@ -21,15 +21,23 @@ trait RequestTrait{
      * @return json     
     */
     public function failedValidation(Validator $validator){    
-        throw new HttpResponseException(
-            back()
-            ->withInput()
-            ->with([
-                "comeback" => [
-                    "message" => "failed",
+        if(!request()->isJson()){
+            throw new HttpResponseException(
+                back()
+                ->withInput()
+                ->with([
+                    "comeback" => [
+                        "message" => "failed",
+                        "failed" => $validator->errors()->first()
+                    ]
+                ])
+            );
+        }else{
+            throw new HttpResponseException(
+                response()->json([
                     "failed" => $validator->errors()->first()
-                ]
-            ])
-        );
+                ],422)
+            );  
+        }
     }
 }

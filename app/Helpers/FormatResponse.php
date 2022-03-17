@@ -41,10 +41,14 @@ class FormatResponse{
 			$response["failed"] = $error->getMessage();
 		}
 
-		return back()
-		    ->withInput()
-			->with([
-	            "comeback" => $response             
-        	]);
+        if(!request()->isJson()){
+			return back()
+		    	->withInput()
+				->with([
+		            "comeback" => $response             
+        		]);
+		}else{
+			return response()->json($response);
+		}
 	}	
 }
