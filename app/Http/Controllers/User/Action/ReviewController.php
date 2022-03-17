@@ -22,7 +22,9 @@ class ReviewController extends Controller
         	\DB::beginTransaction();
 
             auth()->user()->reviewes()
-                ->create($request->only("product_id","star","description"));            
+                ->create([
+                    "product_id" => $invoice->product_id,
+                ] + $request->only("star","description"));            
         
             $review = Review::query()
                 ->select(

@@ -19,12 +19,9 @@ class OrderController extends Controller
             ->findOrFail($id);
 
         if($product->rent){
-            return redirect()->back()->with([
-                "comeback" => [
-                    "message" => "failed",
-                    "failed" => "Maaf sepertinya lapangan telah tersewa"
-                ]
-            ]);
+            return response()->json([
+                "failed" => "Maaf sepertinya lapangan telah tersewa"                        
+            ],422);
         }
 
         $minDate = now()->addDays(intval(ConfigModel::where('name','payment_day')->first()->value)+1)->format("Y-m-d");
